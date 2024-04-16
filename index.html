@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ktd0pre.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <a class="skip" href="#main_section">Skip to main content</a>
+    <header>
+        <nav class="nav">
+            <div class="nav-container">
+            <img src="images/logo.png" alt="Rick and Morty logo" class="logo">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="rick.html">Rick</a></li>
+                <li><a href="morty.html">Morty</a></li>
+                <li><a href="summer.html">Summer</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main_section">
+
+        <div id="theme-song-player" class="theme-song-container">
+            <button id="play-button" onclick="togglePlay()">Play Theme Song</button>
+            <audio id="theme-audio" src="audio/rick_and_morty_theme.mp3"></audio>
+        </div>
+
+        <section id="intro">
+            <p>
+                Welcome to the premier 'Rick and Morty' fan page! Explore the adventures of the brilliant yet unstable Rick, his anxious grandson Morty, and resourceful granddaughter Summer as they navigate family chaos and interdimensional mayhem. Celebrate with us the mind-bending journeys and comedic genius of this groundbreaking sci-fi series!
+            </p>
+        </section>
+
+        <section id="characters">
+            <h2 id="title">Characters</h2>
+            <div class="character-list">
+                <a href="rick.html">
+                    <img src="images/rick1.png" alt="Rick portrait" class="character-image">
+                    <h3>Rick</h3>
+                </a>
+
+                <a href="morty.html">
+                    <img src="images/morty1.png" alt="Morty portrait" class="character-image">
+                    <h3>Morty</h3>
+                </a>
+
+                <a href="summer.html">
+                    <img src="images/summer1.png" alt="Summer portrait" class="character-image">
+                    <h3>Summer</h3>
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rick and Morty Fan Site</p>
+    </footer>
+
+    <script>
+        function togglePlay() {
+            var audio = document.getElementById('theme-audio');
+            var playButton = document.getElementById('play-button');
+            audio.volume = 0.2;
+            if (audio.paused) {
+                audio.play();
+                playButton.innerText = 'Pause Theme Song';
+            } else {
+                audio.pause();
+                playButton.innerText = 'Play Theme Song';
+            }
+        }
+        </script>
+
+    </body>
+</html>

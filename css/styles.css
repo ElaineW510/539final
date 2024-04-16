@@ -1,0 +1,554 @@
+
+.skip{
+    position: absolute;
+    left: -9999px;
+    height: 25px;
+    background-color: white;
+    overflow:hidden;
+    z-index: 1;
+}
+
+.skip:focus{
+    position: absolute;
+    left: 0;
+    width:auto;
+    height:auto;
+    overflow: visible;
+    z-index: 10000;
+}
+
+footer {
+    background-color: rgb(35, 38, 35);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 200px; 
+    height: auto;
+  }
+
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav a {
+    float: left;
+    color: rgb(111, 227, 217); 
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+    background-color: #e031e3;
+    color: #191f1f;
+  }
+
+
+  nav a.active {
+    border: 4px solid  rgb(155, 246, 50);
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px rgb(155, 246, 50);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(111, 227, 217);
+  }
+
+
+
+body{
+    margin:20px;
+    font-family: "baileywick-jf-gothic", sans-serif;
+    background-color: #191f1f;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(35, 38, 35);
+}
+
+
+#intro{
+    background-color: rgba(199, 247, 194, 0.236);
+    border: 2px solid rgb(155, 246, 50);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#intro p{
+    color: rgb(68, 219, 206);
+}
+
+/*style the character section so that the title and the image all in middle and the h2 and h3 is white*/
+#title{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+#characters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.character-list a {
+  display: block;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(112, 229, 126, 0.592);
+  border-radius: 10px;
+  border: 2px solid rgb(155, 246, 50);
+  background-color: rgba(199, 247, 194, 0.236);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.character-list a:hover {
+  transform: translateY(-10px);
+}
+
+.character-list a:first-child .character-image {
+  width: 110%;
+  margin-left: -10%;
+  margin-right: -10%;
+  margin-top: 7%;
+}
+
+.character-image {
+  width: 100%;
+  height: auto;
+}
+
+h3 {
+  margin: 10px 0;
+  color: white;
+  font-family: "baileywick-jf-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*style the play music section*/
+.theme-song-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#play-button {
+  background-color: #006400;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+#play-button:hover {
+  background-color: #008000;
+}
+
+
+/*style the sub-page*/
+#character-name {
+  text-align: center;
+  color: rgb(155, 246, 50);
+  text-shadow: 1px 1px rgba(250, 255, 245, 0.566);
+  margin-top: 50px;
+}
+
+
+
+#bioSection p{
+    text-align: center;
+    color: rgb(155, 246, 50);
+}
+
+/*style the button*/
+.button{
+  display:flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+#funfact .button button {
+  background-color: rgb(155, 246, 50);
+  color: rgb(19, 93, 44);
+  padding: 10px 20px;
+  margin: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px #2e7d32;
+  transition: all 0.3s;
+  font-family: "baileywick-jf-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 50px;
+}
+
+/* Hover effect for buttons */
+#funfact .button button:hover {
+  background-color: #45a049;
+  box-shadow: 0 2px #366732;
+  transform: translateY(2px);
+  color:#FFFFFF;
+}
+
+#funfact .button button:active {
+  background-color: #28702b;
+  box-shadow: 0 2px #366732;
+  transform: translateY(2px);
+  color: #FFFFFF;
+}
+
+#funfact .button button.pressed {
+  background-color: #286b2c;
+  box-shadow: 0 2px #366732;
+  transform: translateY(2px);
+  color: #FFFFFF;
+}
+
+/*style the fact description section*/
+.factd{
+  text-align: center;
+  color: rgb(247, 247, 247);
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+iframe{
+  width: 100%;
+  height: 300px;
+  border: 2px solid rgb(155, 246, 50);
+  border-radius: 10px;
+}
+
+/*style the gallery section*/
+#gallery-title{
+  text-align: center;
+  color: rgb(155, 246, 50);
+  text-shadow: 1px 1px rgba(250, 255, 245, 0.566);
+  margin-top: 50px;
+}
+
+#photogallery{
+  margin-top: 30px;
+}
+
+#photogallery .gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  flex: none;
+  width: 100%;
+  scroll-snap-align: start;
+  position: relative;
+  border: 3px solid rgb(155, 246, 50);
+  box-shadow: #FFFFFF 0px 0px 10px;
+  border-radius: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+
+/*style for the tablet view*/
+@media screen and (min-width: 768px) {
+  /*style the navigation so that the menu aligns horizontally*/
+  .nav ul{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  body{
+    background-image: url('../images/space4.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #character-name {
+    text-align: left;
+    margin-left: 90px;
+
+  }
+
+  #intro{
+      background-color: rgba(25, 33, 24, 0.715);
+  }
+
+  footer {
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+
+  }
+
+  .factd{
+    background-color: #191f1f;
+  }
+
+/*style rick's section in tablet view*/
+  #rick_main #bioSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #rick_main #bioSection .character-image {
+    justify-self: start;
+  }
+
+  #rick_main #bioSection p {
+    font-size: 1.2em;
+    justify-self: end;
+  }
+
+/*style morty's section in tablet view*/
+  #morty_main #bioSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #morty_main #bioSection .character-image {
+    justify-self: start;
+    width: 90%;
+  }
+
+  #morty_main .character-image {
+    margin-left: 35px;
+  }
+
+  #morty_main #bioSection p {
+    font-size: 1.2em;
+    justify-self: end;
+  }
+
+/*style summer's section in tablet view*/
+#summer_main #bioSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+#summer_main #bioSection .character-image {
+  justify-self: start;
+  width: 90%;
+}
+
+#summer_main .character-image {
+  margin-left: 35px;
+}
+
+#summer_main #bioSection p {
+  font-size: 1.2em;
+  justify-self: end;
+}
+
+
+
+  iframe{
+    width: 50%;
+    height: 300px;
+    margin:auto;
+    display: block;
+  }
+
+  #photogallery .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .gallery-item {
+    width: auto;
+  }
+}
+
+/*style for the laptop view*/
+@media screen and (min-width: 1024px) {
+  body{
+    background-image: url('../images/space5.gif');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  /*style the index page*/
+  .character-list a {
+    display: block;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(112, 229, 126, 0.592);
+    border-radius: 10px;
+    border: 2px solid rgb(155, 246, 50);
+    background-color: rgba(199, 247, 194, 0.236);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+
+  .nav-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .nav ul {
+    flex-direction: row;
+    padding: 0;
+    margin-left: 400px;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .nav li {
+    display: inline-flex;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: rgb(111, 227, 217);
+    padding: 14px 16px;
+    font-size: 17px;
+  }
+
+  .logo {
+    flex-shrink: 0;
+    margin-right: auto;
+    margin-left: 30px;
+  }
+
+  /*style rick's section in laptop view*/
+  body #character-name {
+    text-align: center;
+    margin: auto;
+  }
+
+  #rick_main #bioSection .character-image {
+    justify-self: start;
+    margin-left: 100px;
+    width: 75%;
+  }
+
+  #rick_main #bioSection p {
+    font-size: 1.2em;
+    justify-self: end;
+    margin-right: 100px;
+  }
+
+  #rick_main .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  #rick_main .gallery-item:last-child:nth-child(4) {
+    grid-column: 2 / span 1;
+    justify-self: center;
+  }
+
+  .gallery-item {
+
+    height: 300px;
+    width:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-image {
+    height: 100%;
+    width: max-content;
+    object-fit: cover;
+}
+
+/*style morty's section in laptop view*/
+#morty_main #bioSection p {
+  font-size: 1.2em;
+  justify-self: end;
+  margin-right: 100px;
+}
+
+#morty_main .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+#morty_main .gallery-item:last-child:nth-child(4) {
+  grid-column: 2 / span 1;
+  justify-self: center;
+}
+
+/*style Summer's section in laptop view*/
+#summer_main #bioSection p {
+  font-size: 1.2em;
+  justify-self: end;
+  margin-right: 100px;
+}
+
+#summer_main .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#summer_main .gallery-item:last-child:nth-child(4) {
+  grid-column: 2 / span 1;
+  justify-self: center;
+}
+
+}
+
+@media screen and (prefers-reduced-motion: reduce), screen and (min-width: 1024px) {
+  body {
+    background-image: url('../images/space7.jpeg');
+  }
+}
