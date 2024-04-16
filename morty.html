@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ktd0pre.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <a class="skip" href="#morty_main">Skip to main content</a>
+    <header>
+        <nav class="nav">
+            <div class="nav-container">
+            <img src="images/logo.png" alt="Rick and Morty logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rick.html">Rick</a></li>
+                <li><a class="active" href="morty.html">Morty</a></li>
+                <li><a href="summer.html">Summer</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main" id="morty_main">
+        <h1 id="character-name">Morty Smith</h1>
+        <div id="bioSection">
+            <img src="images/morty2.webp" alt="morty wearing a head decoration" class="character-image">
+            <p>
+                Morty Smith is a good-hearted but easily distressed 14-year-old, who is easily manipulated, and can be somewhat easily provoked to anger. He is obsessed with his crush on Jessica, a fellow student at his school. Morty is often dismissed as a sidekick, but his bravery and loyalty make him a crucial part of Rick's adventures.
+        </div>
+
+        <div id="funfact">
+            <div class="button">
+            <button type="button" id="button1">Armothy</button>
+            <button type="button" id="button2">Evil Morty</button>
+            </div>
+
+        <div id="armothy" class="fact">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/o6KMx7kgviI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="factd">
+                "Armothy" is the name Morty gives to a sentient, vengeful arm. It embodies the spirit of a warrior seeking revenge for his family's demise, granting Morty unparalleled combat skills and a deeper insight into themes of vengeance throughout their shared journey.</p>
+        </div>
+
+        <div id="evilmorty" class="fact">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7JXomLN8YUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="factd">
+                "Evil Morty" is a cunning antagonist, challenging Rick with his intellect and ambition. He embodies themes of power and the potential for darkness within, making him a complex and intriguing character in the series.</p>
+        </div>
+    </div>
+
+    <div id="photogallery">
+        <h2 id="gallery-title">Morty's moment</h2>
+        <div class="gallery">
+          <div class="gallery-item"><img src="images/morty3.jpeg" alt="Rick holding laser whip" class="gallery-image"></div>
+          <div class="gallery-item"><img src="images/morty8.gif" alt="Rick turning into a pickle" class="gallery-image"></div>
+          <div class="gallery-item"><img src="images/morty5.jpeg" alt="Rick driving space ship" class="gallery-image"></div>
+          <div class="gallery-item"><img src="images/morty6.jpeg" alt="Rick standing in the space farm" class="gallery-image"></div>
+        </div>
+
+    </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Rick and Morty Fan Site</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('#funfact .button button').forEach(button => {
+          button.addEventListener('click', function() {
+            document.querySelectorAll('#funfact .button button').forEach(btn => {
+              btn.classList.remove('pressed');
+            });
+
+            this.classList.add('pressed');
+          });
+        });
+        </script>
+
+    <script>
+    function hideAllFacts() {
+        document.querySelectorAll('#funfact .fact').forEach(fact => {
+            fact.style.display = 'none';
+        });
+    }
+
+    document.getElementById('button1').addEventListener('click', function() {
+          hideAllFacts();
+          document.getElementById('armothy').style.display = 'block';
+        });
+
+        document.getElementById('button2').addEventListener('click', function() {
+          hideAllFacts();
+          document.getElementById('evilmorty').style.display = 'block';
+        });
+
+
+        hideAllFacts();
+        document.getElementById('armothy').style.display = 'block';
+        </script>
+    </body>
+</html>
