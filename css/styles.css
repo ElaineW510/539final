@@ -86,6 +86,12 @@ body{
     background-color: rgb(35, 38, 35);
 }
 
+main h1{
+    color: rgb(155, 246, 50);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
 
 #intro{
     background-color: rgba(199, 247, 194, 0.236);
